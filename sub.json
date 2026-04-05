@@ -1,0 +1,177 @@
+[
+  {
+    "log": { "loglevel": "warning" },
+    "remarks": "🇷🇺 Россия | LTE #1",
+    "inbounds": [
+      { "port": 10808, "protocol": "socks", "settings": { "udp": true } },
+      { "port": 10809, "protocol": "http" }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [{
+            "address": "51.250.32.159",
+            "port": 2443,
+            "users": [{
+              "id": "806eb2f4-6673-4652-b71e-390432a62dad",
+              "flow": "xtls-rprx-vision",
+              "encryption": "none"
+            }]
+          }]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ads.x5.ru",
+            "fingerprint": "chrome",
+            "publicKey": "YrCRxfpQD1EGG-hNdlwWYZdTn9JS0nXj_6qK4VMyp1w",
+            "shortId": "22"
+          }
+        }
+      },
+      { "tag": "direct", "protocol": "freedom" },
+      { "tag": "block", "protocol": "blackhole" }
+    ],
+    "routing": {
+      "rules": [
+        { "type": "field", "ip": ["geoip:private"], "outboundTag": "direct" }
+      ]
+    }
+  },
+
+  {
+    "log": { "loglevel": "warning" },
+    "remarks": "🇷🇺 Россия | LTE #2",
+    "inbounds": [
+      { "port": 10808, "protocol": "socks", "settings": { "udp": true } },
+      { "port": 10809, "protocol": "http" }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [{
+            "address": "217.16.27.242",
+            "port": 8443,
+            "users": [{
+              "id": "40600c8a-730a-411c-b72b-c3bca115dcf7",
+              "encryption": "none"
+            }]
+          }]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "UpdateService"
+          },
+          "realitySettings": {
+            "serverName": "sso.passport.yandex.ru",
+            "fingerprint": "chrome",
+            "publicKey": "oWi1Dm7iMdTGeh-BI8rwKcnIaqeG2zF874NrSpPEPlI",
+            "shortId": "77cf23bd7f73c97a"
+          }
+        }
+      },
+      { "tag": "direct", "protocol": "freedom" },
+      { "tag": "block", "protocol": "blackhole" }
+    ],
+    "routing": {
+      "rules": [
+        { "type": "field", "ip": ["geoip:private"], "outboundTag": "direct" }
+      ]
+    }
+  },
+
+  {
+    "log": { "loglevel": "warning" },
+    "remarks": "🇷🇺 Россия | LTE #3",
+    "inbounds": [
+      { "port": 10808, "protocol": "socks", "settings": { "udp": true } },
+      { "port": 10809, "protocol": "http" }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [{
+            "address": "95.163.208.83",
+            "port": 443,
+            "users": [{
+              "id": "40600c8a-730a-411c-b72b-c3bca115dcf7",
+              "encryption": "none"
+            }]
+          }]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "UpdateService"
+          },
+          "realitySettings": {
+            "serverName": "eh.vk.com",
+            "fingerprint": "chrome",
+            "publicKey": "_oEGDYSSHrqmbHEUoHbp6YnmNTcXTVdWXcDmpi3JdH0",
+            "shortId": "aefbcf7fc283bd55"
+          }
+        }
+      },
+      { "tag": "direct", "protocol": "freedom" },
+      { "tag": "block", "protocol": "blackhole" }
+    ],
+    "routing": {
+      "rules": [
+        { "type": "field", "ip": ["geoip:private"], "outboundTag": "direct" }
+      ]
+    }
+  },
+
+  {
+    "log": { "loglevel": "warning" },
+    "remarks": "🇺🇳 United Nations | LTE #4",
+    "inbounds": [
+      { "port": 10808, "protocol": "socks", "settings": { "udp": true } },
+      { "port": 10809, "protocol": "http" }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [{
+            "address": "217.13.104.213",
+            "port": 443,
+            "users": [{
+              "id": "25d9f667-3292-4d63-b06e-6fbf6b5d2c39",
+              "flow": "xtls-rprx-vision",
+              "encryption": "none"
+            }]
+          }]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "sun6-22.userapi.com",
+            "fingerprint": "chrome",
+            "publicKey": "fhMqHujqxaRsM4oM5MOectW90_nHWj7AEftfbO3Ht0Q",
+            "shortId": ""
+          }
+        }
+      },
+      { "tag": "direct", "protocol": "freedom" },
+      { "tag": "block", "protocol": "blackhole" }
+    ],
+    "routing": {
+      "rules": [
+        { "type": "field", "ip": ["geoip:private"], "outboundTag": "direct" }
+      ]
+    }
+  }
+]
